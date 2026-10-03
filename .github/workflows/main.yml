@@ -6,7 +6,6 @@ empregos:
   rdp seguro:
     executa em: windows-latest
     tempo limite em minutos: 3600
-
     passos:
       - nome: Configurar configurações principais de RDP
         executar: |
@@ -14,7 +13,7 @@ empregos:
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'
                              -Nome "fDenyTSConnections" -Valor 0 -Forçar
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp'
-                             -Nome "UserAuthentication" -Valor 0 -Forçar
+                           -Nome "UserAuthentication" -Valor 0 -Forçar
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp'
                              -Nome "SecurityLayer" -Valor 0 -Forçar
 
